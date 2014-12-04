@@ -1,4 +1,4 @@
-function sls.set(){
-    echo $1=$2 >> shell_source.sh;
-    source shell_source.sh;
+function s.set(){
+    echo $1=$2 >> ~/github/ubuntuShel/mySource.sh;
+    source ~/github/ubuntuShel/mySource.sh;
 }

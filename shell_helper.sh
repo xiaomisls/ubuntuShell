@@ -12,13 +12,15 @@ function s.mountMiRouter(){
         mkdir $dir;
     fi
     echo $host;
-    sudo mount -o username=$1,password=$2 //$host/share $dir
+    sudo mount -rw -o username=$1,password=$2 //$host/share $dir
 }
 
 function s.umountMiRouter(){
     dir=tempSambaDir;
-    sudo umount $dir;
-    rmdir $dir;
+    if [ -d $dir ]; then
+        sudo umount $dir;
+        rmdir $dir;
+    fi
 }
 #vi多行注释 :<开始行号,结束行号或$>s/^/#/  e.g. 19,$s/^/#/
 
