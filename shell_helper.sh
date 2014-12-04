@@ -48,3 +48,8 @@ function s.umountMiRouter(){
 #-w file exists and is writable by the current process. 
 #-x file exists and is executable by the current process. 
 #-z string length is zero. 
+
+function s.free(){
+#proc文件系统是一个伪文件系统，它只存在内存当中，而不占用外存空间。它以文件系统的方式为访问系统内核数据的操作提供接口
+    cat /proc/meminfo |grep MemFree;
+}
