@@ -63,3 +63,8 @@ sudo apt-get autoremove;
 
 sudo sed -i '$ a\ JAVA_HOME=/opt' /etc/environment;
 sudo sed -i '$ a\ CLASSPATH=/opt' /etc/environment;
+
+sudo curl https://storage.googleapis.com/git-repo-downloads/repo > repo
+sudo mkdir /opt/sls
+sudo chmod 777 repo 
+sudo mv repo /opt/sls/
