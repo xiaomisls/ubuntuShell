@@ -58,13 +58,10 @@ sudo apt-get remove vlc;
 echo -e "\033[41;33m install chrome\033[0m"
 (wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && sudo dpkg -i google-chrome-stable_current_amd64.deb  && rm google-chrome-stable_current_amd64.deb &&sudo apt-get remove firefox);
 #clean reference
-echo -e "\033[42;37m apt-get automove \033[0m"
+echo -e "\033[42;37m apt-get autoremove \033[0m"
 sudo apt-get autoremove;
 
 sudo sed -i '$ a\ JAVA_HOME=/opt' /etc/environment;
 sudo sed -i '$ a\ CLASSPATH=/opt' /etc/environment;
-
-sudo curl https://storage.googleapis.com/git-repo-downloads/repo > repo
-sudo mkdir /opt/sls
-sudo chmod 777 repo 
-sudo mv repo /opt/sls/
+./repoConfig.sh
+./vimConfig.sh
