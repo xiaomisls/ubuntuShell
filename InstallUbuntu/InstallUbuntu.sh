@@ -61,7 +61,7 @@ echo -e "\033[41;33m install chrome\033[0m"
 echo -e "\033[42;37m apt-get autoremove \033[0m"
 sudo apt-get autoremove;
 
-sudo sed -i '$ a\ JAVA_HOME=/opt' /etc/environment;
-sudo sed -i '$ a\ CLASSPATH=/opt' /etc/environment;
+sudo sed -i '$a\JAVA_HOME=/opt' /etc/environment;
+sudo sed -i '$a\CLASSPATH=/opt' /etc/environment;
 ./repoConfig.sh
 ./vimConfig.sh
