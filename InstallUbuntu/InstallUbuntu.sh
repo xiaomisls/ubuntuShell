@@ -43,7 +43,7 @@ sudo apt-get update;
 
 #browser
 echo -e "\033[41;33m install chrome\033[0m"
-(wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && sudo dpkg -i google-chrome-stable_current_amd64.deb  && rm google-chrome-stable_current_amd64.deb &&sudo apt-get remove firefox);
+(wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && sudo dpkg -i google-chrome-stable_current_amd64.deb  && rm google-chrome-stable_current_amd64.deb && sudo apt-get remove firefox);
 #clean reference
 echo -e "\033[42;37m apt-get autoremove \033[0m"
 sudo apt-get autoremove;
