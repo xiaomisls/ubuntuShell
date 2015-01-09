@@ -49,6 +49,10 @@ sudo apt-get install vim;
 echo -e "\033[41;33m install meld \033[0m"
 sudo apt-get install meld;
 
+#用于制作usb系统安装盘
+echo -e "\033[41;33m install unetbooin \033[0m"
+sudo apt-get install unetbootin;
+
 #player
 echo -e "\033[41;33m install smplayer\033[0m"
 sudo apt-get install smplayer; 
