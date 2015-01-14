@@ -64,3 +64,15 @@ function s.pic(){
     eog -f $1 ;
 }
 
+function s.back(){
+    ($1 &) ;    
+#shell 前台／后台命令
+#1. <commend>+& :让命令在后台执行。如 eclipse &,让eclipse在后台启动，不再占用shell.但是输出还会出现在shell里。（eclipse &）连输出也不占shell
+#2.ctrl+z 命令:让前台执行的任务暂停，空出shell. 
+#(1) CTRL+Z停止进程并放入后台     (2) jobs显示当前暂停的进程     (3) bg %N使第N个任务在后台运行(%前有空格)     (4) fg %N使第N个任务在前台运行     默认bg,fg不带%N时表示对最后一个进程操作
+#
+#nohup与&
+#nohup ping XXX :后台执行，shell可见，ctrl+c可中止，退出shell仍在执行.
+#nohup ping XXX ＆:后台执行,shell不可见。
+#& ping XXX :后台执行，shell不可见，退出shell停止执行
+}
