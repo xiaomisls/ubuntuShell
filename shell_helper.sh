@@ -76,3 +76,13 @@ function s.back(){
 #nohup ping XXX ＆:后台执行,shell不可见。
 #& ping XXX :后台执行，shell不可见，退出shell停止执行
 }
+
+function s.getUbuntuSource(){
+    temp=`type $1`;
+    tmp=/${temp#*/} #与％分别是左右截取字符串
+    echo $tmp;
+    dkpgpaht=`sudo dpkg -S $tmp`;
+    sourcepath=${dkpgpaht%%:*}; #%最小匹配　%%最大匹配
+    echo $sourcepath;
+    (apt-get source $sourcepath);
+}
