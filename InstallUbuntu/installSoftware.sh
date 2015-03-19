@@ -18,6 +18,8 @@ echo -e "\033[41;33m install smplayer\033[0m"
 sudo apt-get install smplayer; 
 sudo apt-get remove vlc;
 
+echo -e "\033[41;33m install curl\033[0m"
+sudo apt-get install curl;
 echo -e "\033[41;33m GoAgent \033[0m"
 dir=/opt/goagent
 if [ ! -d $dir ]; then
