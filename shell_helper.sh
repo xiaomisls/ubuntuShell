@@ -86,3 +86,8 @@ function s.getUbuntuSource(){
     echo $sourcepath;
     (apt-get source $sourcepath);
 }
+
+
+# dpkg -l
+# 列出所有已安装的软件包。
+
